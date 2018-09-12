@@ -112,7 +112,7 @@ For that we have to :
 
 Actually it does not generate a real tree but another pyramid with highlighted terms that represent the tree.
 
-Numbers will be displyed in the upper right corner of each cell to indicate the pairs of cells which made possible to find a node of the tree (2 cells with the same number indicates that they have been used together to find the next node).
+Numbers will be displayed in the upper right corner of each cell to indicate the pairs of cells which made possible to find a node of the tree (2 cells with the same number indicates that they have been used together to find the next node).
 
 This functionality is done using a recursive function, it is applied first to the top of the pyramid, then it is called recursively as soon as it finds a couple of suitable cells.
 
