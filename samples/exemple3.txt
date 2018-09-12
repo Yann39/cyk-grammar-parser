@@ -1,0 +1,13 @@
+#########
+Grammaire
+#########
+S>AA
+S>AS
+S>b
+A>SA
+A>AS
+A>a
+##########
+Expression
+##########
+abbabab

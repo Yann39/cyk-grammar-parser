@@ -1,0 +1,12 @@
+#########
+Grammaire
+#########
+S>AB
+A>BS
+B>BA
+A>a
+B>b
+##########
+Expression
+##########
+babba
