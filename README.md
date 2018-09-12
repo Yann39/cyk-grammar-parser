@@ -30,7 +30,7 @@ If it is valid, a success message will be displayed in the "Résultat" (Result) 
 ![Tree interface picture](doc/tree_interface.png?raw=true "Tree interface")
 
 There is also a button "Importer un fichier" (Import a file) which allows to import a grammar and an expression in the program from a file.
-This avoids grasping the grammar and expression manually every time. The file must have a specific format described in the next section.
+This avoids entering the grammar and expression manually every time. The file must have a specific format described in the next section.
 Four example files have been provided in the `samples` directory.
 
 ### Grammar
@@ -51,6 +51,7 @@ left term> right terms
 ### Expression
 
 The expression to be checked must be entered without spaces or line breaks. Only one expression must be specified.
+
 Example: `abbabaaba`
 
 ### File
@@ -111,7 +112,7 @@ For that we have to :
 
 Actually it does not generate a real tree but another pyramid with highlighted terms that represent the tree.
 
-The numbers in red indicate the pairs of cells which made possible to find a node of the tree (2 cells with the same number indicates that they have been used together to find the next node).
+Numbers will be displyed in the upper right corner of each cell to indicate the pairs of cells which made possible to find a node of the tree (2 cells with the same number indicates that they have been used together to find the next node).
 
 This functionality is done using a recursive function, it is applied first to the top of the pyramid, then it is called recursively as soon as it finds a couple of suitable cells.
 
@@ -138,7 +139,7 @@ that correspond to the following tree :
 
 ![Tree example picture](doc/tree_example.png?raw=true "Tree example")
 
-There are multiple possible trees for some grammars, the program will show always the same as the algorithm always takes the first value that it finds for a couple of terms.
+There are multiple possible trees for some grammars, however the program will show always the same tree, as the algorithm always takes the first value that it finds for a couple of terms.
 
 ## Licence
 
