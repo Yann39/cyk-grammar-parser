@@ -104,9 +104,9 @@ for i:=2 to n do
 done
 ```
 For that we have to :
-- find all possible pairs of two strings of type "A, B, C, D".
+- find all possible pairs of two strings of type `A, B, C, D`.
 - find each of the right terms (separated by commas) that generate a couple.
-- remove all duplicates in a string of type "A, B, C, D" in order not to have several times the same value in a cell of the pyramid.
+- remove all duplicates in a string of type `A, B, C, D` in order not to have several times the same value in a cell of the pyramid.
 
 ### Tree calculation
 
@@ -116,7 +116,7 @@ Numbers will be displayed in the upper right corner of each cell to indicate the
 
 This functionality is done using a recursive function, it is applied first to the top of the pyramid, then it is called recursively as soon as it finds a couple of suitable cells.
 
-Example :
+**Example** :
 
 Following grammar :
 ```
@@ -135,7 +135,7 @@ Give the following pyramid :
 
 ![Pyramid example picture](doc/pyramid_example.png?raw=true "Pyramid example")
 
-that correspond to the following tree :
+which corresponds to the following tree :
 
 ![Tree example picture](doc/tree_example.png?raw=true "Tree example")
 
@@ -144,3 +144,5 @@ There are multiple possible trees for some grammars, however the program will sh
 ## Licence
 
 WTFPL license : http://www.wtfpl.net/
+
+But a mention is always appreciated :)
