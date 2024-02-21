@@ -23,7 +23,7 @@ Basic **Java Swing** application to demonstrate **grammar parsing** using the **
 
 ## About the project
 
-<img alt="Java logo" src="logo-java.svg" height="92"/>
+<img alt="Java logo" src="doc/logo-java.svg" height="92"/>
 
 This is a simple GUI application (in French) that demonstrate grammar parsing using the **Cocke–Younger–Kasami** algorithm.
 
