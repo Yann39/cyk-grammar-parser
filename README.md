@@ -12,13 +12,13 @@ Basic **Java Swing** application to demonstrate **grammar parsing** using the **
 
 * [About the project](#about-the-project)
 * [Usage](#usage)
-  * [Grammar](#grammar)
-  * [Expression](#expression)
-  * [File](#file)
+    * [Grammar](#grammar)
+    * [Expression](#expression)
+    * [File](#file)
 * [Technical details](#technical-details)
-  * [Pyramid base calculation](#pyramid-base-calculation)
-  * [Pyramid upper part calculation](#pyramid-upper-part-calculation)
-  * [Tree calculation](#tree-calculation)
+    * [Pyramid base calculation](#pyramid-base-calculation)
+    * [Pyramid upper part calculation](#pyramid-upper-part-calculation)
+    * [Tree calculation](#tree-calculation)
 * [License](#license)
 
 ## About the project
@@ -64,9 +64,11 @@ A rule must be entered without spaces or line breaks, and with the following syn
 
 For example for `S> AB`, `S` is the left term, `A` and `B` are the right terms.
 
-The program does not allow to enter terms of more than 1 character, indeed in the example above, `AB` cannot be considered as a single term but only as two distinct terms `A` and `B`.
+The program does not allow to enter terms of more than 1 character, indeed in the example above, `AB` cannot be considered as a single term but only as two distinct terms `A`
+and `B`.
 
 The complete grammar must be entered with a new line after each term, without spaces, by using the following syntax:
+
 ```
 left term> right terms
 left term> right terms
@@ -82,6 +84,7 @@ Example: `abbabaaba`
 ## File
 
 Importable files in the application must have the following format:
+
 ```
 #########
 Grammar
@@ -109,6 +112,7 @@ The pyramid is actually represented in memory via a two-dimensional array (`Stri
 ![Pyramid indices picture](doc/pyramid_indices.png?raw=true "Pyramid indices")
 
 To calculate the base of the pyramid, we call, for each letter in the expression, a function that takes as arguments :
+
 - the list of left terms
 - the list of right terms
 - the letter
@@ -118,6 +122,7 @@ and returns a comma separated list of terms. We store each time the result in th
 ### Pyramid upper part calculation
 
 To calculate the upper part of the pyramid, we go trough all the lines (except the base) and all the cells, and apply the following algorithm :
+
 ```
 for i:=2 to n do
     for j:=1 à n-i+1 do
@@ -128,7 +133,9 @@ for i:=2 to n do
     done
 done
 ```
+
 For that we have to :
+
 - find all possible pairs of two strings of type `A, B, C, D`.
 - find each of the right terms (separated by commas) that generate a couple.
 - remove all duplicates in a string of type `A, B, C, D` in order not to have several times the same value in a cell of the pyramid.
@@ -137,13 +144,15 @@ For that we have to :
 
 Actually it does not generate a real tree but another pyramid with highlighted terms that represent the tree.
 
-Numbers will be displayed in the upper right corner of each cell to indicate the pairs of cells which made possible to find a node of the tree (2 cells with the same number indicates that they have been used together to find the next node).
+Numbers will be displayed in the upper right corner of each cell to indicate the pairs of cells which made possible to find a node of the tree (2 cells with the same number
+indicates that they have been used together to find the next node).
 
 This functionality is done using a recursive function, it is applied first to the top of the pyramid, then it is called recursively as soon as it finds a couple of suitable cells.
 
 **Example** :
 
 Following grammar :
+
 ```
 S>AB A>a C>BA
 S>BB B>BB C>AA
@@ -152,6 +161,7 @@ A>AB B>b
 ```
 
 with following expression :
+
 ```
 bbbabbaaba
 ```
@@ -164,7 +174,8 @@ which corresponds to the following tree :
 
 ![Tree example picture](doc/tree_example.png?raw=true "Tree example")
 
-There are multiple possible trees for some grammars, however the program will show always the same tree, as the algorithm always takes the first value that it finds for a couple of terms.
+There are multiple possible trees for some grammars, however the program will show always the same tree, as the algorithm always takes the first value that it finds for a couple of
+terms.
 
 # License
 
