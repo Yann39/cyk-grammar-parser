@@ -1,6 +1,31 @@
-## General
+# Cocke–Younger–Kasami (CYK) Algorithm
 
-This is a simple GUI application (in french) to demonstrate grammar parsing using the **Cocke–Younger–Kasami** algorithm.
+Basic **Java Swing** application to demonstrate **grammar parsing** using the **Cocke–Younger–Kasami** algorithm.
+
+![Version](https://img.shields.io/badge/Version-1.0.0-2AAB92.svg)
+![Static Badge](https://img.shields.io/badge/Last%20update-12%20Apr%202008-blue)
+![Version](https://img.shields.io/badge/Java-6-red.svg)
+
+---
+
+# Table of Contents
+
+* [About the project](#about-the-project)
+* [Usage](#usage)
+  * [Grammar](#grammar)
+  * [Expression](#expression)
+  * [File](#file)
+* [Technical details](#technical-details)
+  * [Pyramid base calculation](#pyramid-base-calculation)
+  * [Pyramid upper part calculation](#pyramid-upper-part-calculation)
+  * [Tree calculation](#tree-calculation)
+* [License](#license)
+
+## About the project
+
+<img alt="Java logo" src="logo-java.svg" height="92"/>
+
+This is a simple GUI application (in French) that demonstrate grammar parsing using the **Cocke–Younger–Kasami** algorithm.
 
 Application has been built on **April 2008** using **Netbeans IDE 5.5**.
 
@@ -8,7 +33,7 @@ It uses the **Swing Application Framework** and was compiled with **Java 6**.
 
 Drawings were built using the **Graphics2D** library.
 
-## Usage
+# Usage
 
 Run the provided `.jar` file :
 
@@ -33,7 +58,7 @@ There is also a button "Importer un fichier" (Import a file) which allows to imp
 This avoids entering the grammar and expression manually every time. The file must have a specific format described in the next section.
 Four example files have been provided in the `samples` directory.
 
-### Grammar
+## Grammar
 
 A rule must be entered without spaces or line breaks, and with the following syntax: `left term> right terms`
 
@@ -48,13 +73,13 @@ left term> right terms
 left term> right terms
 ```
 
-### Expression
+## Expression
 
 The expression to be checked must be entered without spaces or line breaks. Only one expression must be specified.
 
 Example: `abbabaaba`
 
-### File
+## File
 
 Importable files in the application must have the following format:
 ```
@@ -141,8 +166,17 @@ which corresponds to the following tree :
 
 There are multiple possible trees for some grammars, however the program will show always the same tree, as the algorithm always takes the first value that it finds for a couple of terms.
 
-## Licence
+# License
 
-WTFPL license : http://www.wtfpl.net/
+[General Public License (GPL) v3](https://www.gnu.org/licenses/gpl-3.0.en.html)
 
-But a mention is always appreciated :)
+This program is free software: you can redistribute it and/or modify it under the terms of the GNU
+General Public License as published by the Free Software Foundation, either version 3 of the
+License, or (at your option) any later version.
+
+This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without
+even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
+General Public License for more details.
+
+You should have received a copy of the GNU General Public License along with this program. If not,
+see <http://www.gnu.org/licenses/>.
